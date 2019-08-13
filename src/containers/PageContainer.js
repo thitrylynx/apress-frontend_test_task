@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Page } from '../components/Page'
+import { Product } from '../components/Product'
 // import { getPhotos } from '../actions/PageActions'
 // import { getLastYears } from '../util/date'
 
@@ -10,18 +10,21 @@ class PageContainer extends React.Component {
   }
 
   render() {
-    const { page } = this.props
+    const { products } = this.props
     return (
-      <Page
-        products={page.products}
-      />
+      <div className="pageContainer">
+        {products.map(product => {
+          return <Product key={product.id} product={product} /> 
+          })}
+      </div>
     )
+
   }
-}
+  }
 
 const mapStateToProps = store => {
   return {
-    page: store.page,
+    products: store.page.products,
   }
 }
 

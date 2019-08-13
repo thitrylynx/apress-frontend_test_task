@@ -69,6 +69,27 @@ h3 {
   vertical-align: top;
 }
 
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  background-color: aqua;
+}
+
+.item {
+  display: flex;
+  width: 700px;
+  margin-top: 10px;
+  background-color: #6d8cb0;
+}
+
+.productImage {
+  width: 200px;
+  height: 200px;
+
+  /* background-color: #6383a8; */
+}
 .btn {
   border: none;
   border-radius: 2px;
