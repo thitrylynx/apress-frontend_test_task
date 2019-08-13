@@ -1,4 +1,6 @@
-var API = {
+import { SET_YEAR } from '../actions/PageActions'
+
+const initialState = {
   products: [
     {
       "id": 1, 
@@ -70,4 +72,8 @@ var API = {
       "img": "assets/images/10.jpg"
     },           
   ]
-};
+}
+
+export function pageReducer(state = initialState) {
+  return state
+}
